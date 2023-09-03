@@ -21,7 +21,7 @@ module.exports = {
     I.fillField(this.email, user.email);
     I.fillField(this.telephone, user.telephone);
     I.fillField(this.password, user.password);
-    I.fillField(this.passwordConfirm, user.passwordConfirm);
+    I.fillField(this.passwordConfirm, user.password);
   },
   submitNewUserForm(){
     I.click(this.privacyPolicyButton);

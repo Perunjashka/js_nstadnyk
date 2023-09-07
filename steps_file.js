@@ -26,6 +26,7 @@ const continueButton4 = { xpath: '//input[@id="button-payment-method"]' };
 const newAddressButton = { xpath: '//label[@for="payment_addressnew1"]' };
 const agreeTermsConditionsButton = { xpath: '//input[@id="agree1"]' };
 const confirmButton = { xpath: '//input[@id="button-confirm"]' };
+
 module.exports = function () {
   return actor({
 

@@ -29,7 +29,8 @@ Scenario('buy product', async ({ I, productPage, cartPage }) => {
     const flatShippingRatePrice = await cartPage.getflatShippingRatePrice();
     const vatPrice = await cartPage.getVatPrice();
     I.assertEqual(productPrice + taxPrice + flatShippingRatePrice + vatPrice, totalPrice, "Prices are not in match");
+    console.log(totalPrice);
     I.confirmOrder();
-    //const numOfElementsCart = await I.grabNumberOfVisibleElements({ xpath: '//div[@id="cart"]' });
-    //console.log(numOfElementsCart);
+    const numberOfItemsCart = await I.grabNumberOfVisibleElements({ xpath: '//span[@id="cart-total2"]'});
+    console.log(numberOfItemsCart);
 }).tag("buy");

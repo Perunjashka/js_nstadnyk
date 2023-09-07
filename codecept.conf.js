@@ -20,10 +20,10 @@ exports.config = {
       show: true,
       waitForNavigation: 'networkidle',
       waitForTimeout: 7000,
-      windowSize: '1900x900',
+      windowSize: '1400x900',
     },
     ChaiWrapper: {
-            require: "codeceptjs-chai"
+            require: "codeceptjs-chai",
         }
   },
   include: {

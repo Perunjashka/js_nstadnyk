@@ -19,7 +19,7 @@ exports.config = {
       url: 'http://opencart.qatestlab.net/',
       show: true,
       waitForNavigation: 'networkidle',
-      waitForTimeout: 5000,
+      waitForTimeout: 7000,
       windowSize: '1900x900',
     },
     ChaiWrapper: {

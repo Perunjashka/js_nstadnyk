@@ -27,8 +27,9 @@ Scenario('buy product', async ({ I, productPage, cartPage }) => {
     const totalPrice = await cartPage.getTotalPrice();
     const taxPrice = await cartPage.getTaxPrice();
     const flatShippingRatePrice = await cartPage.getflatShippingRatePrice();
-    const vatPrice = await cartPage.getvatPrice();
-    I.assertEqual((productPrice + taxPrice + flatShippingRatePrice + vatPrice), totalPrice, "Prices are not in match");
-    const numOfElementsCart = await I.grabNumberOfVisibleElements({ xpath: '//div[@id="cart"]' });
-    console.log(numOfElementsCart);
+    const vatPrice = await cartPage.getVatPrice();
+    I.assertEqual(productPrice + taxPrice + flatShippingRatePrice + vatPrice, totalPrice, "Prices are not in match");
+    I.confirmOrder();
+    //const numOfElementsCart = await I.grabNumberOfVisibleElements({ xpath: '//div[@id="cart"]' });
+    //console.log(numOfElementsCart);
 }).tag("buy");

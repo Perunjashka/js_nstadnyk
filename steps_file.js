@@ -65,10 +65,14 @@ module.exports = function () {
       this.click(continueButton3);
       this.click(agreeTermsConditionsButton);
       this.click(continueButton4);
-      this.click(confirmButton);
+      
 
+    },
+
+    confirmOrder(){
+      this.click(confirmButton);
     }
 
   });
-  
+
 }

@@ -19,14 +19,20 @@ exports.config = {
       url: 'http://opencart.qatestlab.net/',
       show: true,
       waitForNavigation: 'networkidle',
-      waitForTimeout: 5000,
-      windowSize: '1900x900',
-    }
+      waitForTimeout: 7000,
+      windowSize: '1400x900',
+    },
+    ChaiWrapper: {
+            require: "codeceptjs-chai",
+        }
   },
   include: {
     I: './steps_file.js',
     basePage: "./pages/base.js",
     accountPage: "./pages/account.js",
+    productPage: "./pages/product.js",
+
+    cartPage: "./pages/cart.js",
   },
   name: 'js_nstadnyk'
 }

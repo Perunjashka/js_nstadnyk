@@ -1,5 +1,3 @@
-//const continueButton= require("./pages/account");
-
 const languageButton = { xpath: '//*[@id="form-language"]/div/span' };
 const engLanguageButton = { xpath: '//*[@id="form-language"]/div/ul/li[1]/button' };
 const emailField = { css: "#input-email" };
@@ -66,14 +64,12 @@ module.exports = function () {
       this.click(continueButton3);
       this.click(agreeTermsConditionsButton);
       this.click(continueButton4);
-      
-
-    },
-
-    confirmOrder(){
-      this.click(confirmButton);
-    }
-
-  });
+      },
+   
+   confirmOrder(){
+         this.click(confirmButton);
+       }
+   
+});
 
 }

@@ -30,9 +30,11 @@ module.exports = {
       return vatPrice = parseFloat(vatPrice.replace(/[^0-9\.]/g, ""));
 
    },
+   
+   }
 
-   verifySuccessfulPurchase() {
-      I.seeTextEquals({ xpath: '//div[@id="content"]/h1' }, "Your order has been placed!");
-   },
+   
 
-}
+   
+
+

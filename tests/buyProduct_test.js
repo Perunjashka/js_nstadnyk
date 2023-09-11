@@ -14,7 +14,7 @@ Feature('buy product');
 Scenario('buy product', async ({ I, productPage, cartPage }) => {
 
     I.login(USER);
-    I.amOnPage('/index.php?route=product/product&product_id=44 ');
+    I.amOnPage('/index.php?route=product/product&product_id=44');
 
     productPage.selectColor();
     productPage.selectSize();
@@ -31,6 +31,7 @@ Scenario('buy product', async ({ I, productPage, cartPage }) => {
     I.assertEqual(productPrice + taxPrice + flatShippingRatePrice + vatPrice, totalPrice, "Prices are not in match");
     console.log(totalPrice);
     I.confirmOrder();
-    const numberOfItemsCart = await I.grabNumberOfVisibleElements({ xpath: '//span[@id="cart-total2"]'});
-    console.log(numberOfItemsCart);
+    verifySuccessfulPurchase();
+    I.seeTextEquals({ xpath: '//div[@id="content"]/h1' }, "Your order has been placed!");
+    
 }).tag("buy");
